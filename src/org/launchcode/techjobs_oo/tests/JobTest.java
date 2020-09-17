@@ -43,55 +43,43 @@ public class JobTest {
     }
 
     @Test
-    public void testToStringReturnsStringWithBlankLine(){
+    public void ToStringReturnsStringContainsBlankLineBeforeAndAfterJobInformation(){
         assertTrue(newJob.toString().startsWith("\n"));
         assertTrue(newJob.toString().endsWith("\n"));
     }
 
     @Test
-    public void testToStringContainsLabels(){
-        String expected = "\n" +
-                "ID: " +
+    public void ToStringContainsLabels(){
+        String expected = "\nID: " +
                 newJob.getId() +
-                "\n" +
-                "Name: " +
+                "\nName: " +
                 newJob.getName() +
-                "\n" +
-                "Employer: " +
+                "\nEmployer: " +
                 newJob.getEmployer() +
-                "\n" +
-                "Location: " +
+                "\nLocation: " +
                 newJob.getLocation() +
-                "\n" +
-                "Position Type: " +
+                "\nPosition Type: " +
                 newJob.getPositionType() +
-                "\n" +
-                "Core Competency: " +
+                "\nCore Competency: " +
                 newJob.getCoreCompetency() +
                 "\n";
         assertEquals(expected, newJob.toString());
     }
 
     @Test
-    public void testToStringReturnsMessageForEmptyField(){
+    public void ToStringReturnsMessageForEmptyField(){
         int id = jobForTestEmptyField.getId();
-        String expected = "\n" +
-                "ID: " +
+        String expected = "\nID: " +
                 id +
-                "\n" +
-                "Name: " +
+                "\nName: " +
                 "Data not available" +
-                "\n" +
-                "Employer: " +
+                "\nEmployer: " +
                 "Data not available" +
-                "\n" +
-                "Location: " +
+                "\nLocation: " +
                 jobForTestEmptyField.getLocation() +
-                "\n" +
-                "Position Type: " +
+                "\nPosition Type: " +
                 jobForTestEmptyField.getPositionType() +
-                "\n" +
-                "Core Competency: " +
+                "\nCore Competency: " +
                 jobForTestEmptyField.getCoreCompetency() +
                 "\n";
         assertEquals(expected,jobForTestEmptyField.toString());

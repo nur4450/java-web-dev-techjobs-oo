@@ -105,13 +105,12 @@ public class Job {
         if(coreCompetency.getValue() == ""){
             setCoreCompetency(new CoreCompetency("Data not available"));
         }
-        return "\n" +
-                "ID: " + id + "\n" +
-                "Name: " + name + "\n" +
-                "Employer: " + employer + "\n" +
-                "Location: " + location + "\n" +
-                "Position Type: " + positionType + "\n" +
-                "Core Competency: " + coreCompetency +
+        return "\nID: " + id +
+                "\nName: " + name +
+                "\nEmployer: " + employer +
+                "\nLocation: " + location +
+                "\nPosition Type: " + positionType +
+                "\nCore Competency: " + coreCompetency +
                 '\n';
     }
 
